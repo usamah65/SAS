@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas (SAS)</title>
+    <script>
+        // no.1
+        const nilaiSekolah = parseInt(prompt("Masukkan nilai"), 10);
+
+        if (nilaiSekolah >= 90) {
+            alert("Grade A");
+        } else if (nilaiSekolah >= 80) {
+            alert("Grade B");
+        } else if (nilaiSekolah >= 70) {
+            alert("Grade C");
+        } else if (nilaiSekolah >= 60) {
+            alert("Grade D");
+        } else {
+            alert("Grade E");
+        };
+        
+
+        // no.2
+        const username = prompt("Masukkan username");
+        const password = prompt("Masukkan password");
+
+        const correctUsername = "admin";
+        const correctPassword = "12345";
+
+        if (username === correctUsername && password === correctPassword) {
+            alert("Login berhasil!");
+        } else {
+            alert("Login gagal!");
+        }
+        console.log(username, password);
+
+
+        // no.3
+        function login(username, password) {
+            const correctUsername = "admin";
+            const correctPassword = "12345";
+
+            prompt("Masukkan username");
+            prompt("Masukkan password");
+
+            if (username === correctUsername && password === correctPassword) {
+            alert("Login berhasil!");
+        } else {
+            alert("Login gagal!");
+        }
+            }
+        console.log(login("admin", "12345"));
+
+
+        // no.4
+        function addToCart() {
+            alert("Produk berhasil ditambahkan ke keranjang! 🛒");
+        }
+
+        document.querySelector('button').addEventListener('mouseover', function() {
+            this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            this.style.transform = 'scale(1.05)';
+        });
+
+        document.querySelector('button').addEventListener('mouseout', function() {
+            this.style.boxShadow = 'none';
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: gray;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            background: rgba(69, 69, 69, 0.8); 
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            margin: auto; 
+            text-align: center;
+        }
+
+        h2 {
+            color: white;
+            margin: 10px;
+        }
+
+        h3 {
+            color: #007bff;
+            margin: 0;
+        }
+
+        p {
+            color: whitesmoke;
+        }
+
+        button {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button img {
+            width: 15px;
+            margin-right: 5px;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #0056b3, #007bff);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="photo-1549298916-b41d501d3772.avif" alt="Produk" style="width: 100%; border-radius: 10px;">
+        <h2 style="color: white;">Produk Premium</h2>
+        <h3 style="color: #007bff;">Rp 250.000</h3>
+        <p style="color: whitesmoke;">Produk premium dengan kualitas terbaik,
+            nyaman digunkan, dan desain elegan. Cocok
+            untuk segala kebutuhan Anda.
+        </p>
+        <button onclick="addToCart()">
+            <img src="3144456.png" alt="Keranjang"> Tambahkan ke Keranjang
+        </button>
+    </div>
+</body>
+</html>
